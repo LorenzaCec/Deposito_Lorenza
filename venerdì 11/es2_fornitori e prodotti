@@ -1,0 +1,21 @@
+SELECT Fornitori.nome, Prodotti.nome FROM Prodotti INNER JOIN Fornitori ON Fornitori.id = Prodotti.fornitore_id;
+
+-- con SELECT chiedo di mostrarmi quelle tabelle
+-- FROM: si parte da prodotti
+-- lo unisco con Fornitori
+-- ON: condizione secondo cui i due id devono coincidere: !!! di Prodotti ho messo FORNITORE.ID!!! NO id e basta!
+
+SELECT Prodotti.nome, Fornitori.paese FROM Prodotti INNER JOIN Fornitori ON Fornitori.id = Prodotti.fornitore_id WHERE Prodotti.prezzo >300;
+
+-- WHERE lo metto alla fine perchè voglio che tutto ciò che ho scritto prima sia mostrato condizionatamente a questo HWERE
+
+SELECT fornitore_id FROM Prodotti GROUP BY fornitore_id;
+-- NO VA BENE COUNT!!
+
+SELECT nome, prezzo FROM Prodotti ORDER BY prezzo DESC;
+
+SELECT Prodotti.nome FROM Prodotti INNER JOIN Fornitori ON Fornitori.id = Prodotti.fornitore_id WHERE Fornitori.paese = 'Italia';
+
+SELECT nome, prezzo FROM Prodotti WHERE categoria = 'Informatica'; -- condizione qualitativa;
+
+SELECT AVG(Prodotti.prezzo) FROM Prodotti INNER JOIN Fornitori ON Fornitori.id = Prodotti.fornitore_id WHERE Fornitori.nome = 'TechGlobal';
