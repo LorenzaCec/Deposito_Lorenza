@@ -1,0 +1,14 @@
+-- ESERCIZIO 1
+
+INSERT INTO Auto (marca, modello, anno, prezzo) VALUES
+  ('Fiat', 'Panda', 2020, 9500),
+  ('Volkswagen', 'Golf', 2018, 13500),
+  ('Toyota', 'Yaris', 2022, 16500),
+  ('Ford', 'Focus', 2019, 12000),
+  ('BMW', 'Serie 1', 2021, 22000); -- RICORDARSI DI METTERE VIRGOLE!
+  
+SELECT * FROM Auto WHERE prezzo > 10000;
+  
+SELECT * FROM Auto ORDER BY anno DESC;
+
+UPDATE Auto SET prezzo = prezzo*1.1;
